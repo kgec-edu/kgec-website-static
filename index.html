@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Website Under Maintenance | Kalyani Government Engineering College</title>
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="The official website of Kalyani Government Engineering College (kgec.edu.in) is currently undergoing scheduled system maintenance. Essential contacts and statutory links provided.">
+  <meta name="theme-color" content="#0e1738">
+  <meta property="og:title" content="Website Under Maintenance | Kalyani Government Engineering College">
+  <meta property="og:description" content="The official website of Kalyani Government Engineering College is undergoing scheduled maintenance.">
+  <meta property="og:type" content="website">
+  
+  <link rel="icon" type="image/svg+xml" href="images/kgec-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto+Slab:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-deep: #0e1738;
+      --primary: #1e2b58;
+      --primary-card: #152244;
+      --secondary: #1a4480;
+      --accent: #f2a900;
+      --accent-hover: #d99700;
+      --accent-light: #fef3c7;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --text-light: #f8fafc;
+      --bg-slate: #f8fafc;
+      --border-color: #e2e8f0;
+      --border-card: rgba(242, 169, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-slate);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ─── Top Bar ────────────────────────────────────────── */
+    .tricolor-strip {
+      height: 5px;
+      width: 100%;
+      background: linear-gradient(90deg, #FF671F 0%, #FF671F 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #046A38 66.66%, #046A38 100%);
+    }
+
+    .top-bar {
+      background-color: #f1f5f9;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.75rem;
+      color: #475569;
+      padding: 6px 0;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-tiranga {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(90deg, rgba(255,103,31,0.12), rgba(255,255,255,0.9), rgba(4,106,56,0.12));
+      border: 1px solid rgba(255,153,51,0.4);
+      color: #1e293b;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .top-bar-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 600;
+    }
+
+    .top-bar-links a {
+      color: #475569;
+      transition: color 0.15s ease;
+    }
+
+    .top-bar-links a:hover {
+      color: var(--primary);
+    }
+
+    .top-bar-divider {
+      width: 1px;
+      height: 12px;
+      background-color: #cbd5e1;
+    }
+
+    /* ─── Main Header ───────────────────────────────────── */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 14px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-identity {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .kgec-logo-img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-texts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-bengali {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--secondary);
+      letter-spacing: 0.02em;
+    }
+
+    .brand-english {
+      font-family: 'Roboto Slab', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+      line-height: 1.2;
+      margin: 2px 0 3px 0;
+    }
+
+    .brand-affiliations {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.74rem;
+      color: #64748b;
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+
+    .bullet {
+      width: 4px;
+      height: 4px;
+      background-color: #94a3b8;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #92400e;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .emblem-wrapper {
+      padding-left: 12px;
+      border-left: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+    }
+
+    .indian-emblem-img {
+      height: 46px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* ─── Hero / Maintenance Main Body ──────────────────── */
+    .main-body {
+      flex: 1;
+      padding: 40px 16px 60px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 10%, #ffffff 0%, #f1f5f9 60%, #e2e8f0 100%);
+    }
+
+    .card-wrapper {
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .maintenance-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px -5px rgba(14, 23, 56, 0.08), 0 4px 6px -2px rgba(14, 23, 56, 0.04);
+      padding: 44px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .maintenance-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #1e2b58, #f2a900, #1e2b58);
+    }
+
+    .pulse-badge-container {
+      margin-bottom: 24px;
+    }
+
+    .pulse-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(242, 169, 0, 0.12);
+      border: 1px solid rgba(242, 169, 0, 0.5);
+      color: #92400e;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .pulse-dot {
+      width: 9px;
+      height: 9px;
+      background-color: #d97706;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7);
+      animation: pulse 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(217, 119, 6, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(217, 119, 6, 0);
+      }
+    }
+
+    .card-title {
+      font-family: 'Roboto Slab', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .card-description {
+      font-size: 1.05rem;
+      color: #475569;
+      max-width: 680px;
+      margin: 0 auto 30px auto;
+      line-height: 1.65;
+    }
+
+    .status-highlight-box {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .status-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #334155;
+    }
+
+    .refresh-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-deep);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.84rem;
+      padding: 9px 18px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .refresh-btn:hover {
+      background: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .refresh-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ─── Contact & Assistance Grid ──────────────────────── */
+    .assistance-section {
+      text-align: left;
+      margin-top: 10px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 28px;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .contact-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-card-title {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--primary-deep);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-card-value {
+      font-size: 0.84rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    .contact-card-value a {
+      color: var(--secondary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #cbd5e1;
+    }
+
+    .contact-card-value a:hover {
+      color: var(--primary-deep);
+      text-decoration-color: var(--primary-deep);
+    }
+
+    /* ─── Important Portals Links Strip ──────────────────── */
+    .portals-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .portal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+
+    .portal-link:hover {
+      background: #e2e8f0;
+      color: var(--primary-deep);
+      border-color: #cbd5e1;
+    }
+
+    /* ─── Institutional Footer ───────────────────────────── */
+    .site-footer {
+      background-color: #0a1730;
+      color: #ffffff;
+      padding: 44px 0 24px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 36px;
+      flex-wrap: wrap;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand {
+      max-width: 440px;
+    }
+
+    .footer-brand-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .footer-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-inst-name {
+      font-family: 'Roboto Slab', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+
+    .footer-inst-sub {
+      font-size: 0.75rem;
+      color: #93c5fd;
+      font-weight: 500;
+    }
+
+    .footer-address {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.55;
+      margin-top: 10px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .social-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #facc15;
+      margin-bottom: 4px;
+    }
+
+    .footer-col a {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .footer-col a:hover {
+      color: #60a5fa;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: #cbd5e1;
+    }
+
+    /* ─── Responsive Media Queries ──────────────────────── */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 8px;
+        padding-top: 10px;
+        border-top: 1px solid #f1f5f9;
+      }
+      .brand-english {
+        font-size: 1.15rem;
+      }
+      .card-title {
+        font-size: 1.5rem;
+      }
+      .maintenance-card {
+        padding: 30px 20px;
+      }
+      .top-bar-links {
+        display: none;
+      }
+      .footer-top {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- National Tricolor Strip -->
+  <div class="tricolor-strip" title="Har Ghar Tiranga Celebration"></div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <div class="badge-tiranga">
+          <span>🇮🇳</span>
+          <span>Har Ghar Tiranga • Government of West Bengal</span>
+        </div>
+        
+        <div class="top-bar-links">
+          <a href="https://wb.gov.in" target="_blank" rel="noopener noreferrer">wb.gov.in</a>
+          <span class="top-bar-divider"></span>
+          <a href="https://wbjeeb.nic.in" target="_blank" rel="noopener noreferrer">WBJEEB</a>
+          <span class="top-bar-divider"></span>
+          <a href="https://makautwb.ac.in" target="_blank" rel="noopener noreferrer">MAKAUT</a>
+          <span class="top-bar-divider"></span>
+          <a href="https://www.aicte-india.org" target="_blank" rel="noopener noreferrer">AICTE</a>
+          <span class="top-bar-divider"></span>
+          <a href="mailto:contact@kgec.edu.in" style="color: #0284c7; font-weight: 700;">Emergency Desk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Official Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        
+        <!-- Left: Logo & College Title -->
+        <div class="brand-identity">
+          <img 
+            src="images/kgec-logo.svg" 
+            alt="KGEC Official Emblem" 
+            class="kgec-logo-img"
+            onerror="this.onerror=null; this.src='images/kgec_logo.png';"
+          >
+          <div class="brand-texts">
+            <span class="brand-bengali">কল্যাণী গভর্নমেন্ট ইঞ্জিনিয়ারিং কলেজ</span>
+            <h1 class="brand-english">Kalyani Government Engineering College</h1>
+            <div class="brand-affiliations">
+              <span>Govt. of West Bengal Institute</span>
+              <span class="bullet"></span>
+              <span>Affiliated to MAKAUT</span>
+              <span class="bullet"></span>
+              <span>AICTE Approved</span>
+              <span class="bullet"></span>
+              <span>Estd. 1995</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Status Badge & Indian Emblem -->
+        <div class="header-right">
+          <div class="status-pill">
+            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#d97706;"></span>
+            <span>Maintenance Mode</span>
+          </div>
+
+          <div class="emblem-wrapper" title="National Emblem of India">
+            <img 
+              src="images/indian-emblem.webp" 
+              alt="National Emblem of India" 
+              class="indian-emblem-img"
+              onerror="this.onerror=null; this.src='images/indian-emblem.svg';"
+            >
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Body Content -->
+  <main class="main-body">
+    <div class="card-wrapper">
+      <div class="maintenance-card">
+        
+        <!-- Animated Status Badge -->
+        <div class="pulse-badge-container">
+          <div class="pulse-badge">
+            <div class="pulse-dot"></div>
+            <span>Scheduled Maintenance in Progress</span>
+          </div>
+        </div>
+
+        <!-- Heading & Notice Text -->
+        <h2 class="card-title">Website in Maintenance</h2>
+        <p class="card-description">
+          The official web portal of <strong>Kalyani Government Engineering College (kgec.edu.in)</strong> is temporarily offline for scheduled system upgrades and infrastructure maintenance.
+          Our team is working diligently to restore full portal operations and digital services promptly.
+        </p>
+
+        <!-- Live Status & Auto-refresh Timer -->
+        <div class="status-highlight-box">
+          <div class="status-meta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#d97706"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Auto-checking status in <strong id="countdown" style="color:var(--primary-deep)">30</strong>s</span>
+          </div>
+          <button class="refresh-btn" onclick="window.location.reload();">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            <span>Refresh Now</span>
+          </button>
+        </div>
+
+        <!-- Emergency & Essential Contact Channels -->
+        <div class="assistance-section">
+          <div class="section-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Official Institutional Communications &amp; Helpdesks</span>
+          </div>
+
+          <div class="contacts-grid">
+            <div class="contact-card">
+              <div class="contact-card-title">
+                <span>📍</span>
+                <span>Campus Location</span>
+              </div>
+              <div class="contact-card-value">
+                Kalyani, Nadia District,<br>West Bengal — 741235, India
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-title">
+                <span>✉️</span>
+                <span>Administrative Helpdesk</span>
+              </div>
+              <div class="contact-card-value">
+                Email: <a href="mailto:contact@kgec.edu.in">contact@kgec.edu.in</a><br>
+                Office: <a href="mailto:principal@kgec.edu.in">principal@kgec.edu.in</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-title">
+                <span>📞</span>
+                <span>Telephone &amp; EPABX</span>
+              </div>
+              <div class="contact-card-value">
+                +91 (033) 2582 1309<br>
+                +91 (033) 2582 6680
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-title">
+                <span>🛡️</span>
+                <span>Anti-Ragging Helpline</span>
+              </div>
+              <div class="contact-card-value">
+                Toll Free: <strong>1800-180-5522</strong><br>
+                Email: <a href="mailto:antiragging@kgec.edu.in">antiragging@kgec.edu.in</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Statutory Access Links -->
+          <div class="section-label" style="margin-top: 10px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>Statutory External Portals &amp; Affiliations</span>
+          </div>
+
+          <div class="portals-list">
+            <a class="portal-link" href="https://wbjeeb.nic.in" target="_blank" rel="noopener noreferrer">
+              <span>WBJEEB Admissions Portal</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <a class="portal-link" href="https://makautwb.ac.in" target="_blank" rel="noopener noreferrer">
+              <span>MAKAUT University</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <a class="portal-link" href="https://highereducation.wb.gov.in" target="_blank" rel="noopener noreferrer">
+              <span>Higher Education Dept. (WB)</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <a class="portal-link" href="https://www.aicte-india.org" target="_blank" rel="noopener noreferrer">
+              <span>AICTE New Delhi</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <a class="portal-link" href="https://wb.gov.in" target="_blank" rel="noopener noreferrer">
+              <span>Govt. of West Bengal</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Official Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <!-- Brand Identity Info -->
+        <div class="footer-brand">
+          <div class="footer-brand-header">
+            <img 
+              src="images/kgec-logo.svg" 
+              alt="KGEC Logo" 
+              class="footer-logo"
+              onerror="this.onerror=null; this.src='images/kgec_logo.png';"
+            >
+            <div>
+              <div class="footer-inst-name">Kalyani Government Engineering College</div>
+              <div class="footer-inst-sub">(Government of West Bengal) • Estd. 1995</div>
+            </div>
+          </div>
+          <div class="footer-address">
+            <strong>Campus:</strong> Kalyani, Nadia District, West Bengal — 741235, India.<br>
+            <strong>Phone:</strong> +91 (033) 2582 1309 / 6680 &bull; <strong>Email:</strong> contact@kgec.edu.in
+          </div>
+          <div class="footer-socials">
+            <a href="https://facebook.com/kgec.edu" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://linkedin.com/school/kgec" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://instagram.com/kgec" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://youtube.com/@kgec" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0a1730"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Statutory Links -->
+        <div class="footer-col">
+          <div class="footer-col-title">Government &amp; Regulatory</div>
+          <a href="https://wb.gov.in" target="_blank" rel="noopener noreferrer">Govt. of West Bengal ↗</a>
+          <a href="https://highereducation.wb.gov.in" target="_blank" rel="noopener noreferrer">Higher Education Dept. ↗</a>
+          <a href="https://makautwb.ac.in" target="_blank" rel="noopener noreferrer">MAKAUT West Bengal ↗</a>
+          <a href="https://www.aicte-india.org" target="_blank" rel="noopener noreferrer">AICTE New Delhi ↗</a>
+        </div>
+
+        <!-- Academic Portals -->
+        <div class="footer-col">
+          <div class="footer-col-title">Academic &amp; Admissions</div>
+          <a href="https://wbjeeb.nic.in" target="_blank" rel="noopener noreferrer">WBJEEB Entrance Exams ↗</a>
+          <a href="https://jeemain.nta.nic.in" target="_blank" rel="noopener noreferrer">JEE (Main) NTA ↗</a>
+          <a href="https://www.india.gov.in" target="_blank" rel="noopener noreferrer">National Portal of India ↗</a>
+          <a href="mailto:contact@kgec.edu.in">Administrative Office ↗</a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Credits & Compliance -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Kalyani Government Engineering College. All rights reserved.<br>
+          <span style="opacity:0.75;">Website maintained by Department of Computer Science &amp; Engineering, KGEC.</span>
+        </div>
+        
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <span class="footer-badge">Status: Maintenance</span>
+          <span class="footer-badge">Host: GitHub Pages</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Set Year Dynamically
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Auto-refresh countdown timer
+    let count = 30;
+    const countdownEl = document.getElementById('countdown');
+    setInterval(function() {
+      count--;
+      if (countdownEl) {
+        countdownEl.textContent = count;
+      }
+      if (count <= 0) {
+        window.location.reload();
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
