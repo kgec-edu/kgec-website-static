@@ -630,6 +630,131 @@
       color: #ffffff;
     }
 
+    /* ─── Temporary Notice Board ─────────────────────────── */
+    .notice-board {
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 8px 24px;
+      margin-bottom: 40px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .notice-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .notice-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .notice-item:last-child {
+      border-bottom: none;
+    }
+
+    .notice-date {
+      flex-shrink: 0;
+      min-width: 72px;
+      text-align: center;
+      background: var(--primary-light);
+      border: 1px solid #dbeafe;
+      border-radius: 8px;
+      padding: 8px 6px;
+      line-height: 1.2;
+    }
+
+    .notice-date-day {
+      display: block;
+      font-family: 'Roboto Slab', serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+    }
+
+    .notice-date-month {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--secondary);
+    }
+
+    .notice-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .notice-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .notice-new {
+      display: inline-block;
+      background: #dc2626;
+      color: #ffffff;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      animation: noticeBlink 1.6s ease-in-out infinite;
+    }
+
+    @keyframes noticeBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.55; }
+    }
+
+    .notice-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .notice-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .notice-actions .link-chip {
+      padding: 7px 14px;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .notice-item {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .notice-date {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 6px;
+        min-width: 0;
+        padding: 4px 10px;
+      }
+      .notice-date-day {
+        font-size: 1rem;
+      }
+    }
+
     /* ─── Transit & Campus Guide ─────────────────────────── */
     .transit-box {
       background: #ffffff;
@@ -974,6 +1099,45 @@
   <!-- Main Directory Content -->
   <main class="content-area">
     <div class="container">
+
+      <!-- 0. Temporary Notice Board (remove when primary portal is restored) -->
+      <div class="section-header" id="notices">
+        <div>
+          <h3 class="section-heading">
+            <span>📢</span>
+            <span>Notices &amp; Announcements</span>
+          </h3>
+          <p class="section-subtitle">Time-sensitive official notices published during the portal maintenance period.</p>
+        </div>
+      </div>
+
+      <div class="notice-board">
+        <ul class="notice-list">
+
+          <li class="notice-item">
+            <div class="notice-date" aria-label="Published 3 September 2026">
+              <span class="notice-date-day">03</span>
+              <span class="notice-date-month">Sep 2026</span>
+            </div>
+            <div class="notice-body">
+              <div class="notice-title">
+                <span>Combined Merit List of B.Tech 2nd Year (AY 2026-27) Branch Change</span>
+                <span class="notice-new">New</span>
+              </div>
+              <p class="notice-meta">Academic Section &bull; PDF &bull; 2.2 MB</p>
+              <div class="notice-actions">
+                <a class="link-chip link-chip-primary" href="notices/combined-merit-list-btech-2nd-year-ay-2026-27-branch-change.pdf" target="_blank" rel="noopener">
+                  <span>📄</span><span>View Merit List (PDF)</span>
+                </a>
+                <a class="link-chip" href="notices/combined-merit-list-btech-2nd-year-ay-2026-27-branch-change.pdf" download>
+                  <span>⬇️</span><span>Download</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
 
       <!-- 1. Central Administration & Emergency Helpdesk -->
       <div class="section-header">

@@ -88,12 +88,20 @@ When the main institutional web portal is ready to go back online:
 ├── index.html      # Main responsive institutional maintenance portal
 ├── 404.html        # Fallback router ensuring all paths render the maintenance page
 ├── README.md       # Repository documentation and DNS configuration instructions
+├── notices/        # Temporary notice PDFs linked from the homepage "Notices & Announcements" section
+│   └── combined-merit-list-btech-2nd-year-ay-2026-27-branch-change.pdf
 └── images/         # Self-contained SVG and high-resolution institutional branding assets
     ├── kgec-logo.svg
     ├── kgec_logo.png
     ├── indian-emblem.svg
     └── indian-emblem.webp
 ```
+
+#### Adding or removing a notice
+
+1. Drop the PDF into `notices/` using a lowercase, hyphenated filename (no spaces).
+2. Copy an existing `<li class="notice-item">` block in `index.html` and update the date, title, and `href`.
+3. Remove the whole `<!-- 0. Temporary Notice Board -->` section once the primary portal is restored.
 
 ---
 
